@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/lauralai/Downloads/p4-atm-main_2/bank",
+      "program": "/Users/lauralai/Downloads/p4-atm-main_2/bank/build/Debug/outDebug"
+    }
+  ]
+}

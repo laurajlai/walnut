@@ -7,14 +7,15 @@ from boss import Boss
 from spell import spellbook, Spell
 
 # Players
-player1 = Player("Xuanqiang", [spellbook['Mazio'], spellbook['Tarunda'], spellbook['Bufu'], spellbook['Kick']], 344, 160, 100, "lightning", "ice")
-player2 = Player("Cai Jin", [spellbook['Aqua'], spellbook['Dia'], spellbook['Marakunda'], spellbook['Aques']], 300, 260, 90, "water", "wind")
-player3 = Player("Shengyong", [spellbook['Garu'], spellbook['Tarukaja'], spellbook['Magaru'], spellbook['Punch']], 260, 150, 140, "wind", "fire")
-player4 = Player("Luna", [spellbook['Agi'], spellbook['Rakukaja'], spellbook['Tetrakarn'], spellbook['Dia']], 250, 112, 120, "fire", "water")
+player1 = Player("Xuanqiang", [spellbook['Mazio'], spellbook['Tarunda'], spellbook['Bufula'], spellbook['Kick']], 344, 45, 234, 100, 45, "lightning", "ice")
+player2 = Player("Cai Jin", [spellbook['Aqua'], spellbook['Dia'], spellbook['Marakunda'], spellbook['Aques']], 300, 41, 300, 90, 45, "water", "wind")
+player3 = Player("Shengyong", [spellbook['Garula'], spellbook['Tarukaja'], spellbook['Magaru'], spellbook['Punch']], 410, 42, 160, 140, 45, "wind", "fire")
+player4 = Player("Luna", [spellbook['Agi'], spellbook['Rakukaja'], spellbook['Tetrakarn'], spellbook['Dia']], 350, 43, 210, 120, 45, "fire", "water")
 players = [player1, player2, player3, player4]
 
 # Boss
-ShadowAkari = Boss("Shadow Akari", [spellbook['Agi'], spellbook['Maragi'], spellbook['Sweep'], spellbook['Abduction']], 1235, 250, 135, "fire")
+ShadowAkari = Boss("Shadow Akari", [spellbook['Agilao'], spellbook['Maragi'], spellbook['Sweep'], spellbook['Abduction']], 2048, 55, 980, 135, 47, "fire")
+enemies = [ShadowAkari]
 
 print("Shadow Akari: I don't belong anywhere! Why can't I be like everyone else and fit in?")
 print("Shengyong: ...")
@@ -24,8 +25,8 @@ print("Akari: No...you aren't me!")
 
 while(player1.hp > 0 and ShadowAkari.hp > 0):
     for player in players:
-        player.turn()
-    ShadowAkari.turn()
+        player.turn(players, enemies)
+    ShadowAkari.turn(players)
 
 if player1.hp <= 0:
     print("Azu: Oh no! Senpai!!!!")

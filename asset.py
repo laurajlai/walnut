@@ -1,15 +1,15 @@
-from spell import Spell
-import random
-
 # interactable asset, applies for both bosses and players.
 class InteractableAsset(object):
-   def __init__(self,name, skills, hp, atk, speed, strength="None", weakness="None"):
+   def __init__(self, name, skills, hp, atk, dfn, speed, level, strength="None", weakness="None"):
       self.name = name
       self.skills = skills
       self.hp = hp
+      self.currenthp = hp
       self.atk = atk
+      self.dfn = dfn
       self.speed = speed
-      self.null = strength # immunities
+      self.level = level
+      self.null = strength # immunities/strengths
       self.weakness = weakness # weaknesses
       self.buffs = []
       self.debuffs = []
